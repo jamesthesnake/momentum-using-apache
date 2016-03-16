@@ -8,7 +8,7 @@ from pytz import timezone
 
 ##################################################
 # # Initialize constants and the bootstrap function
-# # @Lily if you want to change and improve the strategy,
+# #  if you want to change and improve the strategy,
 # # only change the constants
 # # please document the periods of your backtests (start time and end time)
 # # the constants used, and some general comments (end gain/loss, fluctuation compared to SPY, risk, and etc)
@@ -39,9 +39,9 @@ SMA_LONG_TICK_UP_PERIOD = 1
 SMA_LONG_TICK_UP_CONSTANT = .999
 
 ###TO DO
-### DAN's constants for stop loss and etc
+###Jake's constants for stop loss and etc
 STOP_LOSS_USED = True
-#Dan's constant for underperforming percentage, the number there is = olderprice/newprice currently 5%
+#Jake constant for underperforming percentage, the number there is = olderprice/newprice currently 5%
 underperforming_PCT = .99
 
 
@@ -67,8 +67,8 @@ def initialize(context):
 
 
 ###########################################
-# # Dan's functions of trade executions
-# Dan's part stop loss
+# #jake functions of trade executions
+# jake part stop loss
 # will be called every 30 mins from handle_data
 # current strategy: (to be filled)
 # will sell securities that are underperforming(-5%)
