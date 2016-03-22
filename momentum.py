@@ -191,6 +191,7 @@ def cond_calc(context):
         else:
             context.cond[stock] = True
         if COND2_USED:
+            #stored under conditon 2
             context.cond[stock] = (context.cond[stock] and cond2)
         #else:
             #uses the result from the if else of cond1
@@ -222,8 +223,8 @@ def cond_calc(context):
 def handle_data(context, data):
     #log.info("handle_data")
     local_time = get_datetime().astimezone(timezone('US/Eastern'))
-    #log.info("local_time.hour" + str(local_time.hour))
-    #log.info("local_time.minute" + str(local_time.minute))
+    log.info("local_time.hour" + str(local_time.hour))
+    log.info("local_time.minute" + str(local_time.minute))
     if local_time.hour == 10 and local_time.minute == 0:
         #log.info("in hour cond")
         context.dayCount += 1
